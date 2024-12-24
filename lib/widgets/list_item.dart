@@ -112,7 +112,8 @@ class _ListItemState extends State<ListItem> {
           child: ProductCard(
             brand: brand,
             model: model,
-            price: '${product.price}',
+            price: '${product.price}', 
+            imageUrl: product.imageUrl,
           ),
         );
       },

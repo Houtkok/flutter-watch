@@ -36,8 +36,17 @@ class TrendingSlider extends StatelessWidget {
                 children: [
                   Expanded(
                       child: Container(
-                    color: Colors.grey[300],
-                  )),
+                      color: Colors.grey[300],
+                      child: Center(
+                        child: Image.asset(
+                          product.imageUrl,
+                          fit: BoxFit.cover,
+                          errorBuilder: (_, __, ___) => const Icon(Icons.image_not_supported,
+                            size: 100, color: Colors.grey),
+                        ),
+                      ),
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(8),
                     child: Center(

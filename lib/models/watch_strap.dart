@@ -43,5 +43,6 @@ class WatchStrap extends Product {
       required super.description,
       required super.price,
       required super.status,
-      required super.onTrend});
+      required super.onTrend, 
+      required super.imageUrl});
 }

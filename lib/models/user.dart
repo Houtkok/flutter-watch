@@ -77,6 +77,4 @@ class User {
     }
     _password = value;
   }
-
-
 }

@@ -17,8 +17,4 @@ class ProductManager extends ChangeNotifier {
       print('Only admins can add products.');
     }
   }
-
-  Product getProductById(String productId) {
-    return _products.firstWhere((p) => p.productID == productId);
-  }
 }

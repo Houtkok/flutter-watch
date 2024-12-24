@@ -41,6 +41,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     final brand = isWatch? (product).brand.displayNames : isStrap ? (product).brand : 'Unknown';
     final model = isWatch ? product.model : isStrap ? product.model : 'Unknown';
     final movement = isWatch ? product.movement.displayName : null;
+    final material = isStrap ? product.material : null;
+    final diameter = isStrap ? product.diameter : null;
+
 
     return Scaffold(
       appBar: AppBar(
@@ -65,16 +68,39 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 
+  void _showFullImage(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog(
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: InteractiveViewer(
+              child: Image.asset(
+                widget.product.imageUrl,
+                fit: BoxFit.contain,
+                errorBuilder: (_, __, ___) => const Icon(Icons.image_not_supported, size: 100, color: Colors.grey),
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   Widget _buildImageSection() {
-    return Expanded(
+    return GestureDetector(
+      onTap: () => _showFullImage(context),
       child: Container(
         height: 250,
         decoration: BoxDecoration(
           color: Colors.grey[200],
           borderRadius: BorderRadius.circular(15),
         ),
-        child: Image.network(
-          'https://www.scientificamerican.com/article/we-are-in-the-golden-age-of-bird-watching/',
+        child: Image.asset(
+          widget.product.imageUrl,
           fit: BoxFit.cover,
           errorBuilder: (_, __, ___) => const Icon(Icons.image_not_supported,
               size: 100, color: Colors.grey),

@@ -4,12 +4,14 @@ class ProductCard extends StatelessWidget {
   final String brand;
   final String model;
   final String price;
+  final String imageUrl;
 
   const ProductCard({
     super.key,
     required this.brand,
     required this.model,
-    required this.price,
+    required this.price, 
+    required this.imageUrl,
   });
 
   @override
@@ -26,8 +28,8 @@ class ProductCard extends StatelessWidget {
             child: Container(
               color: Colors.grey[300],
               child: Center(
-                child: Image.network(
-                  'https://wallpapershome.com/animals/birds/bird-colorful-flowers-25630.html',
+                child: Image.asset(
+                  imageUrl,
                   fit: BoxFit.cover,
                   errorBuilder: (_, __, ___) => const Icon(Icons.image_not_supported,
                     size: 100, color: Colors.grey),

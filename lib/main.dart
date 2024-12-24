@@ -38,6 +38,7 @@ class WatchApp extends StatelessWidget {
           ChangeNotifierProvider(create: (_) => CartProvider()),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
 
         initialRoute: '/login',
         routes: {

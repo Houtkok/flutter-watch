@@ -7,6 +7,10 @@ class Product {
   double _price;
   bool _status;
   bool _onTrend;
+  String _imageUrl;
+
+  String get imageUrl => _imageUrl;
+  set imageUrl(String value) => _imageUrl = value;
 
   Product({
     required String name,
@@ -14,12 +18,14 @@ class Product {
     required double price,
     required bool status,
     required bool onTrend,
+    required String imageUrl
   })  : _productID = const Uuid().v4(),
         _name = name,
         _description = description,
         _price = price,
         _status = status,
-        _onTrend = onTrend == false;
+        _onTrend = onTrend == false,
+        _imageUrl = imageUrl;
 
   String get productID => _productID;
   String get name => _name;
@@ -34,21 +40,4 @@ class Product {
   set status(bool value) => _status = value;
   set onTrend(bool value) => _onTrend = value;
 
-  // void viewDetails() {
-  //   print('Product ID: $_productID');
-  //   print('Name: $_name');
-  //   print('Description: $_description');
-  //   print('Price: \$_$_price');
-  //   print('Status: ${_status ? "Available" : "Unavailable"}');
-  //   print('Trending: $_onTrend');
-  // }
-
-  // void updateDetails(
-  //     {String? name, String? description, double? price, bool? status}) {
-  //   if (name != null) _name = name;
-  //   if (description != null) _description = description;
-  //   if (price != null) _price = price;
-  //   if (status != null) _status = status;
-  //   print('Product $_name updated successfully.');
-  // }
 }

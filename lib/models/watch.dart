@@ -52,5 +52,5 @@ class Watch extends Product {
       required this.model,
       required this.year,
       required this.movement,
-      required super.onTrend});
+      required super.onTrend, required super.imageUrl});
 }

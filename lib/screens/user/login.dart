@@ -44,17 +44,25 @@ class _LoginState extends State<Login> {
     String email = _emailInput.text.trim();
     String password = _passwordInput.text;
 
-    await Future.delayed(const Duration(seconds: 1)); 
-    User? user = widget.userManager.authenticate(email, password);
-
-    setState(() {
-      _isLoading = false;
-      if (user != null) {
-        Navigator.pushReplacementNamed(context, '/home');
-      } else {
-        _errorMessage = 'Invalid email or password';
-      }
-    });
+    try {
+      await Future.delayed(const Duration(seconds: 1)); 
+      User? user = widget.userManager.authenticate(email, password);
+      
+      setState(() {
+        _isLoading = false;
+        if (user != null) {
+          Navigator.pushReplacementNamed(context, '/home');
+        } else {
+          _errorMessage = 'Invalid email or password';
+        }
+      });
+    } 
+    catch (e) {
+      setState(() {
+          _isLoading = false;
+          _errorMessage = 'An error occurred during login. Please try again.';
+        });
+    }
   }
 
   @override

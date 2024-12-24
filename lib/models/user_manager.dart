@@ -22,11 +22,15 @@ class UserManager {
   }
 
   User? authenticate(String email, String password){
-    final user = _users.firstWhere(
-      (user) => user.email == email && user.password == password,
-    );
-    _loggedInUser = user; 
-    return user;
+    try {
+      final user = _users.firstWhere(
+        (user) => user.email == email && user.password == password,
+      );
+      _loggedInUser = user; 
+      return user;
+    } on Exception {
+      return null;
+    }
   }
 
   void logout(){
