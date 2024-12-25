@@ -40,13 +40,10 @@ class AccountScreen extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            ListTile(
-              leading: const Icon(Icons.lock_outline),
-              title: const Text('Change Password', style: TextStyle(fontSize: 16)),
-              trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-              onTap: () {
-                Navigator.pushNamed(context, '/change-password');
-              },
+            const ListTile(
+              leading:  Icon(Icons.lock_outline),
+              title:  Text('Change Password', style: TextStyle(fontSize: 16)),
+              trailing:  Icon(Icons.arrow_forward_ios, size: 16),
             ),
             ListTile(
               leading: const Icon(Icons.location_on_outlined),

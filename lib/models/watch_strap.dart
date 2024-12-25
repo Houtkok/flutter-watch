@@ -29,20 +29,36 @@ enum Diameter {
 }
 
 class WatchStrap extends Product {
-  String brand;
-  String model;
-  StrapMaterial material;
-  Diameter diameter;
+  String _brand;
+  String _model;
+  StrapMaterial _material;
+  Diameter _diameter;
+  String _watchStrapImageUrl;
 
   WatchStrap(
-      {required this.brand,
-      required this.model,
-      required this.material,
-      required this.diameter,
+      {required String brand,
+      required String model,
+      required StrapMaterial material,
+      required Diameter diameter,
+      required String watchStrapImageUrl,
       required super.name,
       required super.description,
       required super.price,
       required super.status,
-      required super.onTrend, 
-      required super.imageUrl});
+      }): _brand = brand, 
+          _model = model, 
+          _material = material, 
+          _diameter = diameter, 
+          _watchStrapImageUrl = watchStrapImageUrl;
+  
+  String get brand => _brand;
+  String get model => _model;
+  StrapMaterial get material => _material;
+  Diameter get diameter => _diameter;
+  String get watchStrapImageUrl => _watchStrapImageUrl; 
+  set brand(String brand) => _brand = brand;
+  set model(String model) => _model = model;
+  set material(StrapMaterial material) => _material = material;
+  set diameter(Diameter diameter) => _diameter = diameter;
+  set watchStrapImageUrl(String watchStrapImageUrl) => _watchStrapImageUrl = watchStrapImageUrl;
 }

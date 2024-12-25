@@ -93,13 +93,16 @@ class _ListItemState extends State<ListItem> {
         final product = _filteredProducts[index];
         String brand = 'Unknown';
         String model = 'Unknown';
+        String imageUrl = 'Unknown';
 
         if (product is Watch) {
           brand = product.brand.displayNames;
           model = product.model;
+          imageUrl = product.watchImageUrl;
         } else if (product is WatchStrap) {
           brand = product.brand;
           model = product.model;
+          imageUrl = product.watchStrapImageUrl;
         }
         return GestureDetector(
           onTap: () {
@@ -113,7 +116,7 @@ class _ListItemState extends State<ListItem> {
             brand: brand,
             model: model,
             price: '${product.price}', 
-            imageUrl: product.imageUrl,
+            imageUrl: imageUrl,
           ),
         );
       },

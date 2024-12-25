@@ -38,19 +38,44 @@ static List<String> get displayWatchMovement =>
 }
 
 class Watch extends Product {
-  WatchBrand brand;
-  String model;
-  int year;
-  WatchMovement movement;
+  WatchBrand _brand;
+  String _model;
+  int _year;
+  WatchMovement _movement;
+  bool _onTrend;
+  String _watchImageUrl;
+
 
   Watch(
-      {required super.name,
+      {
+      required WatchBrand brand,
+      required String model,
+      required int year,
+      required WatchMovement movement,
+      required bool onTrend,
+      required String watchImageUrl,
+      required super.name,
       required super.description,
       required super.price,
       required super.status,
-      required this.brand,
-      required this.model,
-      required this.year,
-      required this.movement,
-      required super.onTrend, required super.imageUrl});
+      })  : _brand = brand,
+            _model = model,
+            _year = year,
+            _movement = movement,
+            _onTrend = onTrend == false,
+            _watchImageUrl = watchImageUrl;
+
+  WatchBrand get brand => _brand;
+  String get model => _model;
+  int get year => _year;
+  WatchMovement get movement => _movement;
+  bool get onTrend => _onTrend;
+  String get watchImageUrl => _watchImageUrl;
+
+  set brand(WatchBrand value) => _brand = value;
+  set model(String value) => _model = value;
+  set year(int value) => _year = value;
+  set movement(WatchMovement value) => _movement = value;
+  set onTrend(bool value) => _onTrend = value;
+  set watchImageUrl(String value) => _watchImageUrl = value;
 }

@@ -38,11 +38,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     final isWatch = product is Watch;
     final isStrap = product is WatchStrap;
 
-    final brand = isWatch? (product).brand.displayNames : isStrap ? (product).brand : 'Unknown';
-    final model = isWatch ? product.model : isStrap ? product.model : 'Unknown';
-    final movement = isWatch ? product.movement.displayName : null;
-    final material = isStrap ? product.material : null;
-    final diameter = isStrap ? product.diameter : null;
+    final brand     = isWatch ? product.brand.displayNames : isStrap ? (product).brand : 'Unknown';
+    final model     = isWatch ? product.model : isStrap ? product.model : 'Unknown';
+    final movement  = isWatch ? product.movement.displayName : null;
+    final material  = isStrap ? product.material.displayName : null;
+    final diameter  = isStrap ? product.diameter.displayName : null;
+    final imageUrl = isWatch ? product.watchImageUrl : isStrap ? product.watchStrapImageUrl : 'Unknown';
+    
 
 
     return Scaffold(
@@ -54,11 +56,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            _buildImageSection(),
+            _buildImageSection(imageUrl),
             const SizedBox(height: 20),
             _buildProductInfoSection(brand, model, movement),
             const SizedBox(height: 10),
-            if (isStrap) _buildStrapDetails(product),
+            if (isStrap) _buildStrapDetails(product, material!,diameter!),
             const Spacer(),
             _buildQuantitySelector(),
             _buildAddToCartButton(cartProvider, brand, model),
@@ -68,7 +70,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 
-  void _showFullImage(BuildContext context) {
+  void _showFullImage(BuildContext context, String imageUrl) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -79,7 +81,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             },
             child: InteractiveViewer(
               child: Image.asset(
-                widget.product.imageUrl,
+                imageUrl,
                 fit: BoxFit.contain,
                 errorBuilder: (_, __, ___) => const Icon(Icons.image_not_supported, size: 100, color: Colors.grey),
               ),
@@ -90,9 +92,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 
-  Widget _buildImageSection() {
+  Widget _buildImageSection(String imageUrl) {
     return GestureDetector(
-      onTap: () => _showFullImage(context),
+      onTap: () => _showFullImage(context, imageUrl),
       child: Container(
         height: 250,
         decoration: BoxDecoration(
@@ -100,7 +102,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           borderRadius: BorderRadius.circular(15),
         ),
         child: Image.asset(
-          widget.product.imageUrl,
+          imageUrl,
           fit: BoxFit.cover,
           errorBuilder: (_, __, ___) => const Icon(Icons.image_not_supported,
               size: 100, color: Colors.grey),
@@ -138,13 +140,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 
-  Widget _buildStrapDetails(WatchStrap strap) {
+  Widget _buildStrapDetails(WatchStrap strap, String material, String diameter) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Material: ${strap.material}',
+        Text('Material: $material',
             style: const TextStyle(fontSize: 16)),
-        Text('Diameter: ${strap.diameter}',
+        Text('Diameter: $diameter',
             style: const TextStyle(fontSize: 16)),
       ],
     );
@@ -181,7 +183,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           cartProvider.addItem(
             widget.product.productID,
             widget.product.name,
-            widget.product.price.toInt(),
+            widget.product.price,
             _quantity,
           );
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(

@@ -16,7 +16,7 @@ List<Product> dummyProducts = [
     year: 2023,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Omega Speedmaster',
@@ -28,7 +28,7 @@ List<Product> dummyProducts = [
     year: 2022,
     onTrend: random.nextBool(),
     movement: WatchMovement.kinetic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Tag Heuer Monaco',
@@ -40,7 +40,7 @@ List<Product> dummyProducts = [
     year: 2021,
     onTrend: random.nextBool(), 
     movement: WatchMovement.manual,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Patek Philippe Nautilus',
@@ -52,7 +52,7 @@ List<Product> dummyProducts = [
     year: 2023,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Audemars Piguet Royal Oak',
@@ -64,7 +64,7 @@ List<Product> dummyProducts = [
     year: 2022,
     onTrend: random.nextBool(),
     movement: WatchMovement.quartz,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Breitling Navitimer',
@@ -76,7 +76,7 @@ List<Product> dummyProducts = [
     year: 2021,
     onTrend: random.nextBool(),
     movement: WatchMovement.manual,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'IWC Portugieser',
@@ -88,7 +88,7 @@ List<Product> dummyProducts = [
     year: 2022,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Cartier Santos',
@@ -100,7 +100,7 @@ List<Product> dummyProducts = [
     year: 2023,
     onTrend: random.nextBool(),
     movement: WatchMovement.solar,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Seiko Prospex',
@@ -112,7 +112,7 @@ List<Product> dummyProducts = [
     year: 2022,
     onTrend: random.nextBool(),
     movement: WatchMovement.kinetic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Tudor Black Bay',
@@ -124,7 +124,7 @@ List<Product> dummyProducts = [
     year: 2021,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Grand Seiko Spring Drive',
@@ -136,7 +136,7 @@ List<Product> dummyProducts = [
     year: 2023,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Hublot Big Bang',
@@ -148,7 +148,7 @@ List<Product> dummyProducts = [
     year: 2022,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Longines HydroConquest',
@@ -160,7 +160,7 @@ List<Product> dummyProducts = [
     year: 2023,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Panerai Luminor',
@@ -172,7 +172,7 @@ List<Product> dummyProducts = [
     year: 2021,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Rolex Explorer II',
@@ -184,7 +184,7 @@ List<Product> dummyProducts = [
     year: 2022,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Omega Planet Ocean',
@@ -196,7 +196,7 @@ List<Product> dummyProducts = [
     year: 2023,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Breitling Superocean',
@@ -208,7 +208,7 @@ List<Product> dummyProducts = [
     year: 2021,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'IWC Big Pilot',
@@ -220,7 +220,7 @@ List<Product> dummyProducts = [
     year: 2022,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Cartier Ballon Bleu',
@@ -232,7 +232,7 @@ List<Product> dummyProducts = [
     year: 2023,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif'
   ),
   Watch(
     name: 'Tissot PRX Powermatic 80',
@@ -244,7 +244,7 @@ List<Product> dummyProducts = [
     year: 2022,
     onTrend: random.nextBool(),
     movement: WatchMovement.automatic,
-    imageUrl: 'assets/watches/watch.jfif'
+    watchImageUrl: 'assets/watches/watch.jfif',
   ),
 
   WatchStrap(
@@ -256,8 +256,7 @@ List<Product> dummyProducts = [
     model: 'Daytona',
     material: StrapMaterial.rubber,
     diameter: Diameter.d40,
-    onTrend: random.nextBool(),
-    imageUrl: 'assets/watch_straps/watch_strap.jfif'
+    watchStrapImageUrl: 'assets/watch_straps/watch_strap.jfif'
   ),
   WatchStrap(
     name: 'Omega Speedmaster Strap',
@@ -268,8 +267,7 @@ List<Product> dummyProducts = [
     model: 'Speedmaster',
     material: StrapMaterial.steel,
     diameter: Diameter.d42,
-    onTrend: random.nextBool(),
-    imageUrl: 'assets/watch_straps/watch_strap.jfif'
+    watchStrapImageUrl: 'assets/watch_straps/watch_strap.jfif'
   ),
   WatchStrap(
     name: 'Tag Heuer Monaco Strap',
@@ -279,9 +277,8 @@ List<Product> dummyProducts = [
     brand: 'Tag Heuer',
     model: 'Monaco',
     material: StrapMaterial.leather,
-    diameter: Diameter.d44,
-    onTrend: random.nextBool(),
-    imageUrl: 'assets/watch_straps/watch_strap.jfif'
+    diameter: Diameter.d44, 
+    watchStrapImageUrl: 'assets/watch_straps/watch_strap.jfif'
   ),
   WatchStrap(
     name: 'Seiko Prospex Strap',
@@ -291,9 +288,8 @@ List<Product> dummyProducts = [
     brand: 'Seiko',
     model: 'Prospex',
     material: StrapMaterial.rubber,
-    diameter: Diameter.d40,
-    onTrend: random.nextBool(),
-    imageUrl: 'assets/watch_straps/watch_strap.jfif'
+    diameter: Diameter.d40, 
+    watchStrapImageUrl: 'assets/watch_straps/watch_strap.jfif'
   ),
   WatchStrap(
     name: 'IWC Big Pilot Strap',
@@ -304,8 +300,7 @@ List<Product> dummyProducts = [
     model: 'Big Pilot',
     material: StrapMaterial.leather,
     diameter: Diameter.d44,
-    onTrend: random.nextBool(),
-    imageUrl: 'assets/watch_straps/watch_strap.jfif'
+    watchStrapImageUrl: 'assets/watch_straps/watch_strap.jfif'
   ),
   WatchStrap(
     name: 'Panerai Luminor Strap',
@@ -316,7 +311,6 @@ List<Product> dummyProducts = [
     model: 'Luminor',
     material: StrapMaterial.leather,
     diameter: Diameter.d42,
-    onTrend: random.nextBool(),
-    imageUrl: 'assets/watch_straps/watch_strap.jfif'
+    watchStrapImageUrl: 'assets/watch_straps/watch_strap.jfif',
   ),
 ];
