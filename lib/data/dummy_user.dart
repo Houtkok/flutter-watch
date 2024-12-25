@@ -4,14 +4,14 @@ List<User> dummyUser = [
   User(
       name: 'Admin User',
       email: 'admin@gmail.com',
-      password: 'admin123',
+      password: '123123',
       address: ['Admin Address'],
       role: Role.admin,
     ),
   User(
       name: 'Buyer User',
       email: 'buyer@gmail.com',
-      password: 'buyer123',
+      password: '123123',
       address: ['Buyer Address'],
       role: Role.buyer,
     ),

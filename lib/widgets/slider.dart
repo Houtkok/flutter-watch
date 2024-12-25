@@ -25,7 +25,7 @@ class TrendingSlider extends StatelessWidget {
       ),
       items: trendingProduct.map((product) {
         return Builder(builder: (BuildContext context) {
-          final imageUrl = product is Watch ? product.watchImageUrl : "Unknown";
+          final imageUrl = product.watchImageUrl;
           return Container(
               margin: const EdgeInsets.symmetric(horizontal: 5),
               decoration: BoxDecoration(
